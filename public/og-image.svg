@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Genesis Conductor Engine</title>
+  <desc id="desc">AI-native application scaffolding with deterministic execution and production-ready delivery.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07111f" />
+      <stop offset="100%" stop-color="#0e1b31" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ce2c8" />
+      <stop offset="100%" stop-color="#ffd364" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g opacity="0.22" stroke="#b3c4e0">
+    <path d="M0 84h1200M0 168h1200M0 252h1200M0 336h1200M0 420h1200M0 504h1200" />
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630" />
+  </g>
+  <circle cx="895" cy="188" r="166" fill="none" stroke="#7ce2c8" stroke-opacity="0.28" />
+  <circle cx="970" cy="270" r="108" fill="none" stroke="#ffd364" stroke-opacity="0.24" />
+  <circle cx="826" cy="378" r="78" fill="none" stroke="#b3c4e0" stroke-opacity="0.18" />
+  <text x="86" y="160" fill="#7ce2c8" font-size="22" font-family="IBM Plex Mono, monospace" letter-spacing="4">AI-NATIVE APPLICATION SCAFFOLDING</text>
+  <text x="82" y="292" fill="#eef4ff" font-size="94" font-family="Space Grotesk, Arial, sans-serif" font-weight="700">Genesis</text>
+  <text x="82" y="382" fill="#eef4ff" font-size="94" font-family="Space Grotesk, Arial, sans-serif" font-weight="700">Conductor</text>
+  <text x="82" y="472" fill="#eef4ff" font-size="94" font-family="Space Grotesk, Arial, sans-serif" font-weight="700">Engine</text>
+  <text x="88" y="548" fill="#b3c4e0" font-size="28" font-family="Space Grotesk, Arial, sans-serif">
+    Deterministic delivery for agentic products, workflow systems, and production-grade software.
+  </text>
+  <rect x="820" y="460" width="260" height="66" rx="33" fill="rgba(255,255,255,0.04)" stroke="#b3c4e0" />
+  <text x="860" y="503" fill="url(#accent)" font-size="24" font-family="IBM Plex Mono, monospace">STRATEGY - BUILD - VERIFY</text>
+</svg>
