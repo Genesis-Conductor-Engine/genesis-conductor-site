@@ -3,6 +3,7 @@ import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import { absoluteUrl, siteConfig } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const displayFont = Space_Grotesk({
   subsets: ["latin"],
@@ -68,7 +69,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${displayFont.variable} ${monoFont.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
