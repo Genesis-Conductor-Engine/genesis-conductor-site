@@ -1,4 +1,4 @@
-const DEFAULT_SITE_URL = "https://genesis-conductor-engine.github.io/genesis-conductor-site";
+const DEFAULT_SITE_URL = "https://genesis-conductor-site.iholt-mymail-aacc-edu.workers.dev";
 
 function resolveSiteUrl(): string {
   const rawValue = process.env.NEXT_PUBLIC_SITE_URL?.trim();

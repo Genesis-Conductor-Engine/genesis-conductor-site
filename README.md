@@ -28,11 +28,15 @@ The dev server runs at `http://localhost:3000`.
 ## Scripts
 
 ```bash
-npm run dev
-npm run build
-npm run start
-npm run lint
-npm test
+npm run dev       # Next.js dev server (Node runtime)
+npm run build     # Production build
+npm run start     # Start built app (Node runtime)
+npm run lint      # ESLint
+npm test          # Node test runner
+
+npm run preview   # Build + serve locally in Cloudflare workerd runtime
+npm run deploy    # Build + deploy to Cloudflare Workers
+npm run cf-typegen  # Generate cloudflare-env.d.ts bindings
 ```
 
 ## Environment
@@ -40,20 +44,43 @@ npm test
 Set `NEXT_PUBLIC_SITE_URL` in production to the final canonical origin:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://example.com
+NEXT_PUBLIC_SITE_URL=https://genesis-conductor-site.iholt-mymail-aacc-edu.workers.dev
 ```
 
-If it is not set, the site falls back to the GitHub Pages-style URL for this repository.
+In Cloudflare Workers, set this under **Settings → Build → Build variables** so it is
+available during the OpenNext build step.
 
 ## Deploy
 
-This project is ready for Vercel or any Node-compatible platform that supports Next.js 14.
+This project deploys to **Cloudflare Workers** via the
+[`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare) adapter.
 
-For GitHub:
+### One-time setup
 
-1. Push to `main`
-2. Add an Actions workflow for `npm test`, `npm run lint`, and `npm run build` if your token or org policy allows workflow writes
-3. Configure your preferred deployment target
+```bash
+npm install
+```
+
+### Local preview (workerd runtime)
+
+```bash
+npm run preview
+```
+
+### Production deploy
+
+```bash
+npm run deploy
+```
+
+Requires `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in the environment
+(or `wrangler login` for interactive auth).
+
+### CI/CD
+
+The `.github/workflows/cloudflare-deploy.yml` workflow runs on every push to `main`:
+it lints, tests, builds, and deploys to Cloudflare Workers automatically. Set
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as repository secrets.
 
 ## SEO checklist
 
