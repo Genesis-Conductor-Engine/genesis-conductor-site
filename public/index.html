@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0a0d12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<title>Genesis Conductor — Orchestration for generative AI at production scale</title>
+<meta name="description" content="Run agent graphs, batch jobs, and data pipelines across OpenAI, Anthropic, Google, and local models. Reproducible runs, fine-grained traces, replay from any step. Built by Kovach Enterprises on the ConductorKit design system.">
+<meta name="keywords" content="AI orchestration, agent graphs, LLM pipelines, model evals, Genesis Conductor, ConductorKit, Barcelona-Extropic, reproducible AI, STARK proofs, Kovach Enterprises">
+<meta name="author" content="Kovach Enterprises">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://genesis-conductor-site.iholt-mymail-aacc-edu.workers.dev/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Genesis Conductor">
+<meta property="og:title" content="Genesis Conductor — Orchestration for generative AI at production scale">
+<meta property="og:description" content="One control plane for every agent, job, and pipeline you run. Reproducible runs, fine-grained traces, replay from any step.">
+<meta property="og:url" content="https://genesis-conductor-site.iholt-mymail-aacc-edu.workers.dev/">
+<meta property="og:image" content="https://genesisconductor.io/og.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@genesisconductor">
+<meta name="twitter:title" content="Genesis Conductor">
+<meta name="twitter:description" content="Orchestration for generative AI at production scale.">
+
+<!-- Indexing helpers -->
+<link rel="alternate" type="application/llms.txt" href="/llms.txt">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Performance: preconnect to font origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://unpkg.com">
+
+<!-- Fonts: Inter Tight (display) + Inter (body) + JetBrains Mono + Playfair Display (Barcelona-Extropic Tier-2 fallback) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" media="print" onload="this.media='all'">
+
+<!-- SVG favicon (inline data URI — no extra request) -->
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect x='3' y='20' width='3' height='8' rx='1.5' fill='%238a94a9'/><rect x='10' y='16' width='3' height='16' rx='1.5' fill='%238a94a9'/><rect x='17' y='10' width='3' height='28' rx='1.5' fill='%23c9cfdb'/><rect x='24' y='4' width='3' height='40' rx='1.5' fill='%2327e070'/><rect x='31' y='10' width='3' height='28' rx='1.5' fill='%23c9cfdb'/><rect x='38' y='16' width='3' height='16' rx='1.5' fill='%238a94a9'/><rect x='45' y='20' width='3' height='8' rx='1.5' fill='%238a94a9'/></svg>">
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://genesisconductor.io/#org",
+      "name": "Kovach Enterprises",
+      "url": "https://genesisconductor.io",
+      "logo": "https://genesisconductor.io/assets/logo-mark.svg"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Genesis Conductor",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web, Linux, macOS",
+      "offers": [
+        { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Team", "price": "299", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Enterprise", "price": "2500", "priceCurrency": "USD" }
+      ],
+      "description": "Enterprise orchestration for generative AI workflows. Runs agent graphs, batch jobs, evals, and data pipelines.",
+      "publisher": { "@id": "https://genesisconductor.io/#org" }
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://genesisconductor.io/",
+      "name": "Genesis Conductor",
+      "publisher": { "@id": "https://genesisconductor.io/#org" }
+    }
+  ]
+}
+</script>
+
+<!-- ConductorKit tokens -->
+<link rel="stylesheet" href="assets/conductorkit.css">
+<!-- Barcelona-Extropic brand CSS -->
+<link rel="stylesheet" href="assets/barcelona-extropic.css">
+
+<style>
+  /* ── Critical page-shell CSS ── */
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg-1); }
+  body { font-family: var(--font-body); min-height: 100vh; }
+
+  /* Skip-to-content link for a11y + Lighthouse */
+  .skip { position: absolute; left: -9999px; top: 0; padding: 8px 12px; background: var(--signal); color: var(--n-0); border-radius: 0 0 6px 0; z-index: 999; }
+  .skip:focus { left: 0; }
+
+  /* Pulse animation used throughout */
+  @keyframes ck-pulse { 0%,100% { opacity: 1 } 50% { opacity: 0.4 } }
+
+  /* Marquee scroll used in Specimen */
+  @keyframes marquee { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+
+  /* Morph sweep */
+  @keyframes be-sweep {
+    0%,100% { --be-morph-t: 0; opacity: 1; }
+    50%     { --be-morph-t: 1; opacity: 1; }
+  }
+
+  /* Tick for live clocks */
+  @keyframes tick-in {
+    from { opacity: 0; transform: translateY(2px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  /* App shell wrapper (prevents layout shift while React boots) */
+  #app { min-height: 100vh; }
+
+  .boot {
+    position: fixed; inset: 0; display: grid; place-items: center;
+    background: var(--bg); z-index: 1;
+  }
+  .boot-mark {
+    width: 48px; height: 48px; border-radius: 999px;
+    background: radial-gradient(circle, rgba(39,224,112,0.4) 0%, transparent 70%);
+    animation: ck-pulse 1.4s ease-in-out infinite;
+  }
+
+  /* Selection */
+  ::selection { background: var(--signal); color: var(--n-0); }
+
+  /* Scrollbars (thin, dark-friendly) */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
+
+  /* Focus ring polish */
+  :focus-visible { outline: none; box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px rgba(39, 224, 112, 0.45); border-radius: 4px; }
+
+  /* Tweaks panel transitions */
+  .tweaks-panel { transition: transform var(--dur-3) var(--ease-out), opacity var(--dur-2) var(--ease-out); }
+
+  /* Dotted grid underlay (toggleable) */
+  .grid-bg::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+    background-image:
+      radial-gradient(circle, var(--border) 1px, transparent 1px);
+    background-size: 24px 24px;
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div id="app">
+  <div class="boot"><div class="boot-mark"></div></div>
+</div>
+
+<noscript>
+  <div style="padding:40px;font-family:system-ui;color:#c9cfdb;background:#0a0d12;min-height:100vh">
+    <h1 style="font-family:'Playfair Display',serif;font-weight:900;letter-spacing:0.05em;text-transform:uppercase">Genesis Conductor</h1>
+    <p>This prototype requires JavaScript. The static surfaces below describe what you'd see:</p>
+    <ul>
+      <li><strong>Marketing</strong> — hero, metrics, feature grid, pipelines-as-code example, customer logos.</li>
+      <li><strong>Dashboard</strong> — overview with throughput, active pipelines table, pipeline detail graph, run detail with live logs + step timeline, jobs queue.</li>
+      <li><strong>Specimen</strong> — Barcelona-Extropic type specimen: display, kinetic, chirality, comparison tables, 12:1 contrast proof.</li>
+    </ul>
+  </div>
+</noscript>
+
+<!-- Tweakable defaults — persisted via host edit-mode API -->
+<script>
+window.__TWEAKS__ = /*EDITMODE-BEGIN*/{
+  "surface": "marketing",
+  "theme": "dark",
+  "displayFont": "hybrid",
+  "accent": "signal",
+  "density": "medium",
+  "kinetic": false,
+  "gridBg": true
+}/*EDITMODE-END*/;
+</script>
+
+<!-- React + Babel (pinned + hashed) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" data-presets="react" src="components/Shared.jsx"></script>
+<script type="text/babel" data-presets="react" src="components/Marketing.jsx"></script>
+<script type="text/babel" data-presets="react" src="components/Dashboard.jsx"></script>
+<script type="text/babel" data-presets="react" src="components/Specimen.jsx"></script>
+<script type="text/babel" data-presets="react" src="components/App.jsx"></script>
+
+</body>
+</html>
