@@ -16,6 +16,10 @@ SEO-optimized landing page for the Genesis Conductor Engine organization.
 - JSON-LD structured data for organization and software application entities
 - Minimal Node test coverage to guard core SEO artifacts
 
+## Internal docs
+
+- [Portfolio SEO and Publicity Strategy](docs/marketing/portfolio-seo-publicity-strategy.md) — integrated marketing/SEO strategy for Genesis Conductor, LidLift, and SEAR, including portfolio authority, launch positioning, technical SEO, AI-search visibility, and KPI targets.
+
 ## Local setup
 
 ```bash
