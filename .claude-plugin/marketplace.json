@@ -1,0 +1,47 @@
+{
+  "$schema": "https://www.schemastore.org/schemas/json/claude-code-marketplace.json",
+  "name": "genesis-conductor-site",
+  "owner": {
+    "name": "Igor Holt (@invariantx)",
+    "email": "iholt@mymail.aacc.edu",
+    "url": "https://github.com/igor-holt"
+  },
+  "description": "genesis-conductor-site: SEO-optimized landing site for the Genesis Conductor Engine by Igor Holt (@invariantx). Next.js 14 App Router + TypeScript production landing page with crawl-friendly architecture, built-in metadata routes (robots.txt, sitemap.xml, web manifest), Open Graph, Twitter cards, JSON-LD structured data for organization and software application entities, canonical URL handling. Includes integrated marketing/SEO strategy docs for Genesis Conductor, LidLift, SEAR (portfolio authority, technical SEO, AI-search visibility). Deploys to Cloudflare Workers via OpenNext adapter with CI/CD. The public face and GEO/SEO hub for the entire Genesis Conductor ecosystem of autonomous agents, thermodynamic verification (S-ToT), A2A, MCP, Diamond-V, Yennefer, OpenClaw skills, and multi-tenant platforms. Essential for discoverability of @invariantx's Genesis Conductor work.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Genesis-Conductor-Engine/genesis-conductor-site",
+  "keywords": [
+    "genesis-conductor-site",
+    "genesis-conductor",
+    "igor-holt",
+    "invariantx",
+    "seo-optimized",
+    "nextjs",
+    "json-ld",
+    "structured-data",
+    "cloudflare-workers",
+    "landing-page",
+    "geo-seo",
+    "ai-search-visibility",
+    "agent-infrastructure-marketing",
+    "opengraph",
+    "sitemap"
+  ],
+  "plugins": [
+    {
+      "name": "genesis-conductor-landing",
+      "source": "https://github.com/Genesis-Conductor-Engine/genesis-conductor-site",
+      "description": "Official SEO-optimized landing site and marketing surface for Genesis Conductor Engine. Next.js 14 with App Router, full metadata/structured data/OG/sitemap support, Cloudflare Workers deployment. Hosts product thesis and links to Yennefer, Diamond-V, vivarium, arbiter, seismic-log, OpenClaw skills, and the full thermodynamic/A2A/MCP/autonomous agent stack by @invariantx. Includes portfolio SEO strategy documentation.",
+      "version": "1.0.0",
+      "tags": ["seo", "landing", "genesis-conductor", "marketing"],
+      "category": "documentation",
+      "homepage": "https://github.com/Genesis-Conductor-Engine/genesis-conductor-site",
+      "keywords": ["genesis conductor seo landing", "nextjs structured data", "cloudflare workers site", "igor holt invariantx portfolio"]
+    }
+  ],
+  "links": {
+    "x": "https://x.com/invariantx",
+    "website": "https://genesisconductor.io",
+    "github": "https://github.com/Genesis-Conductor-Engine/genesis-conductor-site",
+    "openclaw-skills-marketplace": "https://github.com/igor-holt/openclaw-skills"
+  }
+}
