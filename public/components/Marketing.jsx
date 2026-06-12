@@ -183,7 +183,7 @@ const CodeSplit = ({ accent }) => (
         <p style={{ color:'var(--fg-2)', fontSize:16, lineHeight:1.6, marginBottom:20 }}>
           Write your pipeline as a typed graph. Conductor handles retries, fan-out, cost caps, and routing. Run locally, push to prod, and get traces back for free.
         </p>
-        <a href="#" style={{ color:accent, fontSize:14, fontFamily:'var(--font-mono)', textDecoration:'none' }}>Read the docs →</a>
+        <a href="/docs" style={{ color:accent, fontSize:14, fontFamily:'var(--font-mono)', textDecoration:'none' }}>Read the docs →</a>
       </div>
       <pre style={{ background:'var(--bg-inset)', border:'1px solid var(--border)', borderRadius:8, padding:24, fontSize:13, lineHeight:1.7, margin:0, fontFamily:'var(--font-mono)', color:'var(--fg-1)', overflow:'auto' }}>
 <span style={{color:'var(--fg-3)'}}>// pipelines/ingest.ts</span>{'\n'}
