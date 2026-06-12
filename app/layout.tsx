@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
-const displayFont = Space_Grotesk({
+const interTight = Inter_Tight({
   subsets: ["latin"],
-  variable: "--font-display"
+  variable: "--font-display",
+  display: "swap",
 });
 
-const monoFont = IBM_Plex_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono"
+  variable: "--font-body",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
         url: absoluteUrl(siteConfig.ogImagePath),
         width: 1200,
         height: 630,
-        alt: "Genesis Conductor Engine landing page preview"
+        alt: "Genesis Conductor — Orchestrate generative AI at production scale"
       }
     ]
   },
@@ -67,7 +74,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${monoFont.variable}`}>
+    <html
+      lang="en"
+      className={`${interTight.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
