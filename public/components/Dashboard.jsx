@@ -152,7 +152,17 @@ const DataTable = ({ columns, rows, onRowClick }) => (
       {columns.map(c => <div key={c.key}>{c.label}</div>)}
     </div>
     {rows.map((row,i) => (
-      <div key={i} onClick={() => onRowClick?.(row)}
+      <div
+        key={i}
+        onClick={() => onRowClick?.(row)}
+        role={onRowClick ? 'button' : undefined}
+        tabIndex={onRowClick ? 0 : undefined}
+        onKeyDown={onRowClick ? (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onRowClick(row);
+          }
+        } : undefined}
         style={{ display:'grid', gridTemplateColumns: columns.map(c => c.width || '1fr').join(' '), padding:'11px 16px', borderBottom: i === rows.length - 1 ? 0 : '1px solid var(--border)', fontSize:13, cursor: onRowClick ? 'pointer' : 'default', transition:'background var(--dur-1) var(--ease-out)' }}
         onMouseEnter={e => e.currentTarget.style.background='var(--bg-hover)'}
         onMouseLeave={e => e.currentTarget.style.background='transparent'}>
