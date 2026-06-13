@@ -1,0 +1,224 @@
+/* ============================================================
+   ConductorKit — Colors & Type Tokens
+   Single source of truth for color and typography.
+   ============================================================ */
+
+/* ---------- Webfonts ----------
+   Loaded from Google Fonts as stand-ins. See README substitution flag.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ===== Raw neutral scale (dark-first) ===== */
+  --n-0:  #05070a;   /* deepest bg */
+  --n-1:  #0a0d12;   /* app bg */
+  --n-2:  #10141b;   /* raised panel */
+  --n-3:  #161b24;   /* card */
+  --n-4:  #1d2330;   /* hover */
+  --n-5:  #262d3c;   /* border */
+  --n-6:  #3a4356;   /* strong border */
+  --n-7:  #5a647a;   /* fg-3 */
+  --n-8:  #8a94a9;   /* fg-2 */
+  --n-9:  #c9cfdb;   /* fg-1 */
+  --n-10: #f4f5f8;   /* fg-0, highest contrast */
+
+  /* ===== Raw accent & semantic ===== */
+  --signal-50:  #d7ffe9;
+  --signal-100: #a6f7c8;
+  --signal-500: #27e070;   /* core signal */
+  --signal-600: #1fb95c;
+  --signal-700: #17923f;
+
+  --warn-500:   #f5b544;
+  --warn-600:   #c98e1f;
+
+  --danger-500: #ff5d5d;
+  --danger-600: #d43a3a;
+
+  --info-500:   #6aa3ff;
+  --info-600:   #4076d8;
+
+  --purple-500: #b07dff; /* used for "agent" category only */
+  --teal-500:   #45d6c4; /* used for "data" category only */
+
+  /* ===== Semantic surface & text tokens (dark theme, default) ===== */
+  --bg:           var(--n-1);
+  --bg-1:         var(--n-2);
+  --bg-2:         var(--n-3);
+  --bg-hover:     var(--n-4);
+  --bg-inset:     var(--n-0);
+
+  --border:        var(--n-5);
+  --border-strong: var(--n-6);
+
+  --fg-0: var(--n-10);   /* titles */
+  --fg-1: var(--n-9);    /* body */
+  --fg-2: var(--n-8);    /* secondary */
+  --fg-3: var(--n-7);    /* tertiary / placeholder / disabled */
+
+  --signal:  var(--signal-500);
+  --signal-weak: rgba(39, 224, 112, 0.12);
+  --warn:    var(--warn-500);
+  --warn-weak: rgba(245, 181, 68, 0.14);
+  --danger:  var(--danger-500);
+  --danger-weak: rgba(255, 93, 93, 0.12);
+  --info:    var(--info-500);
+  --info-weak: rgba(106, 163, 255, 0.12);
+
+  /* ===== Type stacks ===== */
+  --font-display: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+  --font-body:    'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ===== Type scale ===== */
+  --fs-micro:   11px;
+  --fs-sm:      13px;
+  --fs-body:    15px;
+  --fs-lead:    17px;
+  --fs-h4:      20px;
+  --fs-h3:      24px;
+  --fs-h2:      32px;
+  --fs-h1:      40px;
+  --fs-display: 56px;
+  --fs-hero:    80px;
+
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-loose:   1.65;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0em;
+  --tracking-caps:   0.08em;
+
+  /* ===== Spacing ===== */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 48px;
+  --s-12: 64px;
+  --s-16: 96px;
+
+  /* ===== Radii ===== */
+  --r-1:    4px;
+  --r-2:    6px;
+  --r-3:    10px;
+  --r-4:    14px;
+  --r-full: 999px;
+
+  /* ===== Shadows (used sparingly) ===== */
+  --shadow-pop:   0 8px 24px rgba(0, 0, 0, 0.40), 0 0 0 1px var(--border);
+  --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--border);
+
+  /* ===== Focus ===== */
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px rgba(39, 224, 112, 0.45);
+
+  /* ===== Motion ===== */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in:  cubic-bezier(0.4, 0, 1, 1);
+  --dur-1:    120ms;
+  --dur-2:    200ms;
+  --dur-3:    320ms;
+}
+
+/* ===== Light theme override (rarely used; dashboard is dark-first) ===== */
+[data-theme="light"] {
+  --bg:           #ffffff;
+  --bg-1:         #fafbfc;
+  --bg-2:         #f3f4f6;
+  --bg-hover:     #e9ebef;
+  --bg-inset:     #eef0f3;
+
+  --border:        #e4e6eb;
+  --border-strong: #cdd1d8;
+
+  --fg-0: #0b0e13;
+  --fg-1: #1c222d;
+  --fg-2: #4a5362;
+  --fg-3: #7a8396;
+
+  --signal-weak: rgba(23, 146, 63, 0.10);
+  --shadow-pop:   0 8px 24px rgba(17, 24, 39, 0.08), 0 0 0 1px var(--border);
+  --shadow-modal: 0 24px 64px rgba(17, 24, 39, 0.14), 0 0 0 1px var(--border);
+}
+
+/* ============================================================
+   Semantic element styles — drop into any page via <link>
+   ============================================================ */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01", "ss03";
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  color: var(--fg-0);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); font-weight: 600; letter-spacing: 0; }
+h5 { font-size: var(--fs-body); font-weight: 600; letter-spacing: 0;
+     text-transform: uppercase; color: var(--fg-2);
+     letter-spacing: var(--tracking-caps); }
+
+p { margin: 0 0 var(--s-4); color: var(--fg-1); text-wrap: pretty; }
+
+.display  { font-family: var(--font-display); font-size: var(--fs-display);
+            line-height: var(--lh-tight); letter-spacing: var(--tracking-tight);
+            font-weight: 600; color: var(--fg-0); }
+.hero     { font-family: var(--font-display); font-size: var(--fs-hero);
+            line-height: 0.98; letter-spacing: -0.03em;
+            font-weight: 600; color: var(--fg-0); }
+.lead     { font-size: var(--fs-lead); color: var(--fg-2); line-height: var(--lh-normal); }
+.small    { font-size: var(--fs-sm); color: var(--fg-2); }
+.micro    { font-size: var(--fs-micro); color: var(--fg-3);
+            letter-spacing: var(--tracking-caps); text-transform: uppercase; }
+
+code, kbd, samp, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-variant-numeric: tabular-nums;
+}
+
+pre.code {
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2);
+  padding: var(--s-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  overflow: auto;
+  color: var(--fg-1);
+}
+
+a { color: var(--fg-0); text-decoration: underline;
+    text-decoration-color: var(--border-strong);
+    text-underline-offset: 3px;
+    transition: text-decoration-color var(--dur-1) var(--ease-out); }
+a:hover { text-decoration-color: var(--signal); }
+
+hr { border: 0; border-top: 1px solid var(--border); margin: var(--s-6) 0; }
+
+*, *::before, *::after { box-sizing: border-box; }
+*:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: var(--r-1); }
+
+/* Tabular numerals for data */
+.tnum { font-variant-numeric: tabular-nums; }

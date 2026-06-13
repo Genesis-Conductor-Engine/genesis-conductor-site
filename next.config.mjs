@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+claude/cloudflare-deployment-ldllV
+
   async redirects() {
     return [
       // /buy/* → x402 catalog on Coalition Gateway
@@ -30,6 +32,7 @@ const nextConfig = {
       },
     ];
   },
+main
 };
 
 export default nextConfig;

@@ -1,0 +1,34 @@
+# Genesis Conductor
+
+> Enterprise orchestration for generative AI workflows. Runs agent graphs, batch jobs, evals, and data pipelines across model providers — with reproducible runs, fine-grained traces, and replay from any step.
+
+Genesis Conductor is built by Kovach Enterprises on the ConductorKit design system with Barcelona-Extropic display typography. It ships as a web dashboard, developer CLI/SDKs, docs, and a public API, deployed as a 9-plugin Coalition service mesh on Cloudflare Workers with Ed25519 audit chains.
+
+## Primary surfaces
+
+- [Marketing landing](/index.html#marketing): product overview, hero, metrics band, feature grid, pipelines-as-code example
+- [Product dashboard](/index.html#dashboard): Jobs, Pipelines, Run detail, live logs, step timeline
+- [Type specimen](/index.html#specimen): Barcelona-Extropic field manual — display type, chirality, kinetic, Didone-class 12:1 contrast
+
+## Platform capabilities
+
+- Pipeline orchestration as typed graphs (TypeScript SDK, Python SDK, YAML)
+- Reproducible runs: pin model versions, capture inputs, replay from any step
+- Fine-grained traces: every step, every token, every tool call
+- Structured evals: offline evals gated on pass-rate, latency, cost budgets
+- Cost controls: per-pipeline budgets, per-tenant quotas, automatic fallback routing
+- Multi-provider: OpenAI, Anthropic, Google, Mistral, local
+- STARK-verified computation with Ed25519 audit chain
+- ≥70% thermodynamic waste reduction via heterogeneous backend scheduling (ROCm, CUDAq, QUBO, Metal-MPS, D-Wave)
+
+## Design system
+
+Two systems compose:
+- ConductorKit — dark-first operator UI, thin-stroke icons, single signal-green accent, tabular-numeric data rows
+- Barcelona-Extropic — Didone-class display serif, 12:1 stem-to-serif contrast, chirality transforms, kinetic skew variant
+
+## Contact
+
+- Web: https://genesisconductor.io
+- Docs: https://docs.genesisconductor.io
+- Status: https://status.genesisconductor.io
