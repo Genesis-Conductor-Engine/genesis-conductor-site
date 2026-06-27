@@ -9,6 +9,7 @@ Genesis Conductor is built by Kovach Enterprises on the ConductorKit design syst
 - [Marketing landing](/index.html#marketing): product overview, hero, metrics band, feature grid, pipelines-as-code example
 - [Product dashboard](/index.html#dashboard): Jobs, Pipelines, Run detail, live logs, step timeline
 - [Type specimen](/index.html#specimen): Barcelona-Extropic field manual — display type, chirality, kinetic, Didone-class 12:1 contrast
+- [Daily updates](https://news.genesisconductor.io): canonical public synchronization bus for release notes, deployment status, ecosystem progress, and operator-facing project updates
 
 ## Platform capabilities
 
@@ -30,5 +31,6 @@ Two systems compose:
 ## Contact
 
 - Web: https://genesisconductor.io
+- News: https://news.genesisconductor.io
 - Docs: https://docs.genesisconductor.io
 - Status: https://status.genesisconductor.io
