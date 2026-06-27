@@ -1,11 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-claude/cloudflare-deployment-ldllV
 
   async redirects() {
     return [
-      // /buy/* → x402 catalog on Coalition Gateway
+      // /news -> canonical Genesis Conductor daily update channel
+      {
+        source: "/news",
+        destination: "https://news.genesisconductor.io",
+        permanent: false,
+      },
+      {
+        source: "/news/:path*",
+        destination: "https://news.genesisconductor.io/:path*",
+        permanent: false,
+      },
+      // /buy/* -> x402 catalog on Coalition Gateway
       // founders: all-access bundle (highest tier)
       {
         source: "/buy/founders",
@@ -24,7 +34,7 @@ claude/cloudflare-deployment-ldllV
         destination: "https://api.genesisconductor.io/v2/.well-known/x402?tier=pro",
         permanent: false,
       },
-      // catch-all /buy/* → x402 discovery endpoint
+      // catch-all /buy/* -> x402 discovery endpoint
       {
         source: "/buy/:path*",
         destination: "https://api.genesisconductor.io/v2/.well-known/x402",
@@ -32,7 +42,6 @@ claude/cloudflare-deployment-ldllV
       },
     ];
   },
-main
 };
 
 export default nextConfig;
