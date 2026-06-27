@@ -36,7 +36,8 @@ const executionLanes = [
   "Architect product systems from requirements to runnable code.",
   "Ship SEO-aware, conversion-ready interfaces without bloated front-end scaffolding.",
   "Coordinate cloud, edge, and workflow runtimes with explicit operational traceability.",
-  "Publish repo-first projects that are ready for CI, deployment, and ongoing iteration."
+  "Publish repo-first projects that are ready for CI, deployment, and ongoing iteration.",
+  "Route public release notes and operator updates through news.genesisconductor.io."
 ];
 
 const pageSchema = {
@@ -47,7 +48,7 @@ const pageSchema = {
       "@id": `${absoluteUrl("/") }#organization`,
       name: siteConfig.name,
       url: absoluteUrl("/"),
-      sameAs: [siteConfig.githubOrgUrl],
+      sameAs: [siteConfig.githubOrgUrl, siteConfig.newsUrl],
       description: siteConfig.description
     },
     {
@@ -66,6 +67,13 @@ const pageSchema = {
       publisher: {
         "@id": `${absoluteUrl("/") }#organization`
       }
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteConfig.newsUrl}#website`,
+      name: "Genesis Conductor News",
+      url: siteConfig.newsUrl,
+      description: "Canonical public update channel for Genesis Conductor release notes, deployment status, and ecosystem progress."
     }
   ]
 };
@@ -90,6 +98,9 @@ export default function HomePage() {
             <Link className="subtle-link" href="#execution">
               Execution
             </Link>
+            <Link className="subtle-link" href={siteConfig.newsUrl}>
+              News
+            </Link>
             <Link className="cta-link" href={siteConfig.githubOrgUrl}>
               View GitHub Org
             </Link>
@@ -108,13 +119,13 @@ export default function HomePage() {
               <Link className="button button-primary" href={siteConfig.repoUrl}>
                 Launch the repo
               </Link>
-              <Link className="button button-secondary" href="#systems">
-                Explore the stack
+              <Link className="button button-secondary" href={siteConfig.newsUrl}>
+                Read daily updates
               </Link>
             </div>
             <p className="hero-note">
               Built for teams that need topology-aware planning, high-signal interfaces, and code that can
-              ship without a handoff cliff.
+              ship without a handoff cliff. Public release notes now route through news.genesisconductor.io.
             </p>
           </section>
 
@@ -129,11 +140,11 @@ export default function HomePage() {
               <span>workflow orchestration</span>
             </div>
             <div className="vector vector-tertiary">
-              <span>SEO-ready surfaces</span>
+              <span>news update channel</span>
             </div>
             <div className="hero-signal">
               <span>signal map</span>
-              <strong>strategy - build - verify - deploy</strong>
+              <strong>strategy - build - verify - deploy - publish</strong>
             </div>
           </aside>
         </div>
@@ -185,7 +196,8 @@ export default function HomePage() {
             </p>
             <p>
               The landing surface stays sparse on purpose: the brand leads, the execution model is legible,
-              and the technical story is visible in one scan.
+              and the technical story is visible in one scan. The news surface now acts as the public
+              synchronization bus for daily updates, deployment status, release notes, and ecosystem progress.
             </p>
           </div>
           <ul className="execution-list">
@@ -203,8 +215,8 @@ export default function HomePage() {
           <Link className="button button-primary" href={siteConfig.repoUrl}>
             Open repository
           </Link>
-          <Link className="button button-secondary" href={siteConfig.githubOrgUrl}>
-            Browse the organization
+          <Link className="button button-secondary" href={siteConfig.newsUrl}>
+            Open news channel
           </Link>
         </div>
       </section>
