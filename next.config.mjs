@@ -1,45 +1,27 @@
 /** @type {import('next').NextConfig} */
+
+const DASHBOARD = "https://cashflow.genesisconductor.io";
+const NEWS = "https://news.genesisconductor.io";
+const X402 = "https://api.genesisconductor.io/v2/.well-known/x402";
+
+function jump(source, destination) {
+  return { source, destination, permanent: false };
+}
+
 const nextConfig = {
   reactStrictMode: true,
 
   async redirects() {
     return [
-      // /news -> canonical Genesis Conductor daily update channel
-      {
-        source: "/news",
-        destination: "https://news.genesisconductor.io",
-        permanent: false,
-      },
-      {
-        source: "/news/:path*",
-        destination: "https://news.genesisconductor.io/:path*",
-        permanent: false,
-      },
-      // /buy/* -> x402 catalog on Coalition Gateway
-      // founders: all-access bundle (highest tier)
-      {
-        source: "/buy/founders",
-        destination: "https://api.genesisconductor.io/v2/.well-known/x402?tier=founders",
-        permanent: false,
-      },
-      // source-exclusive: source code products (paid-workers, paid-agents)
-      {
-        source: "/buy/source-exclusive",
-        destination: "https://api.genesisconductor.io/v2/.well-known/x402?tier=source",
-        permanent: false,
-      },
-      // pro: individual skills and standard plugin access
-      {
-        source: "/buy/pro",
-        destination: "https://api.genesisconductor.io/v2/.well-known/x402?tier=pro",
-        permanent: false,
-      },
-      // catch-all /buy/* -> x402 discovery endpoint
-      {
-        source: "/buy/:path*",
-        destination: "https://api.genesisconductor.io/v2/.well-known/x402",
-        permanent: false,
-      },
+      jump("/cashflow", `${DASHBOARD}/cashflow`),
+      jump("/cashflow/:path*", `${DASHBOARD}/cashflow/:path*`),
+      jump("/api/cashflow", `${DASHBOARD}/api/cashflow`),
+      jump("/news", NEWS),
+      jump("/news/:path*", `${NEWS}/:path*`),
+      jump("/buy/founders", `${X402}?tier=founders`),
+      jump("/buy/source-exclusive", `${X402}?tier=source`),
+      jump("/buy/pro", `${X402}?tier=pro`),
+      jump("/buy/:path*", X402),
     ];
   },
 };

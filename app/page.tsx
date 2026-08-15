@@ -98,6 +98,9 @@ export default function HomePage() {
             <Link className="subtle-link" href="#execution">
               Execution
             </Link>
+            <Link className="subtle-link" href="/cashflow">
+              Cashflow
+            </Link>
             <Link className="subtle-link" href={siteConfig.newsUrl}>
               News
             </Link>

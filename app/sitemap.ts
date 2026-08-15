@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1
+    },
+    {
+      url: absoluteUrl("/cashflow"),
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8
     }
   ];
 }

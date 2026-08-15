@@ -30,7 +30,20 @@ test("robots and sitemap routes are present", async () => {
 
 test("next config redirects /news to the canonical news channel", async () => {
   const nextConfig = await read("next.config.mjs");
-  assert.match(nextConfig, /source:\s*\"\/news\"/);
-  assert.match(nextConfig, /destination:\s*\"https:\/\/news\.genesisconductor\.io\"/);
+  assert.match(nextConfig, /jump\("\/news", NEWS\)/);
+  assert.match(nextConfig, /news\.genesisconductor\.io/);
   assert.doesNotMatch(nextConfig, /claude\/cloudflare-deployment/);
+});
+
+test("next config redirects /cashflow to the Worker dashboard", async () => {
+  const nextConfig = await read("next.config.mjs");
+  assert.match(nextConfig, /jump\("\/cashflow", `\$\{DASHBOARD\}\/cashflow`\)/);
+  assert.match(nextConfig, /jump\("\/api\/cashflow", `\$\{DASHBOARD\}\/api\/cashflow`\)/);
+  assert.match(nextConfig, /cashflow\.genesisconductor\.io/);
+});
+
+test("homepage nav links to /cashflow", async () => {
+  const page = await read("app/page.tsx");
+  assert.match(page, /href=\"\/cashflow\"/);
+  assert.match(page, /Cashflow/);
 });
