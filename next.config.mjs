@@ -4,6 +4,22 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // /cashflow -> live Worker dashboard (public apex; Worker owns the HTML)
+      {
+        source: "/cashflow",
+        destination: "https://cashflow.genesisconductor.io/cashflow",
+        permanent: false,
+      },
+      {
+        source: "/cashflow/:path*",
+        destination: "https://cashflow.genesisconductor.io/cashflow/:path*",
+        permanent: false,
+      },
+      {
+        source: "/api/cashflow",
+        destination: "https://cashflow.genesisconductor.io/api/cashflow",
+        permanent: false,
+      },
       // /news -> canonical Genesis Conductor daily update channel
       {
         source: "/news",

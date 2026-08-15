@@ -1,4 +1,4 @@
-const DEFAULT_SITE_URL = "https://genesis-conductor-site.iholt-mymail-aacc-edu.workers.dev";
+const DEFAULT_SITE_URL = "https://genesisconductor.io";
 
 function resolveSiteUrl(): string {
   const rawValue = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -33,6 +33,7 @@ export const siteConfig = {
   creator: "Genesis-Conductor-Engine",
   siteUrl: resolveSiteUrl(),
   newsUrl: "https://news.genesisconductor.io",
+  cashflowUrl: "https://cashflow.genesisconductor.io/cashflow",
   githubOrgUrl: "https://github.com/Genesis-Conductor-Engine",
   repoUrl: "https://github.com/Genesis-Conductor-Engine/genesis-conductor-site",
   ogImagePath: "/og-image.svg"
