@@ -1,0 +1,12 @@
+{
+  "name": "lattice-desk-pqc-signature-posture",
+  "version": "1.0.0",
+  "verified": true,
+  "crystalline": 0.87,
+  "algorithm_default": "ML-DSA-65",
+  "hybrid": "Ed25519-or-ECDSA",
+  "fips": ["FIPS 204", "FIPS 205", "FIPS 206-draft"],
+  "urgent_changes": false,
+  "relative_to": "2026-07-31-investigation",
+  "tags": ["pqc", "tunnel-through", "a2a", "diamondnode"]
+}

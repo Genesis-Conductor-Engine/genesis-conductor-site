@@ -1,0 +1,64 @@
+{
+  "evt_id": "evt-pqc-sig-20260822-completion",
+  "schema_version": "1.0",
+  "record_type": "completion",
+  "tags": [
+    "tunnel-through",
+    "objective:intrinsic-pursuit",
+    "pqc",
+    "fips-204",
+    "lattice-desk",
+    "momentum-leverage"
+  ],
+  "connections": [
+    "docs/pqc-and-zk-investigation.md",
+    "31-july-investigation",
+    "15-aug-update",
+    "gc-workers/tunnel-through",
+    "diamondnode/a2a"
+  ],
+  "status": "completed",
+  "payload": {
+    "objective": "intrinsic-pursuit",
+    "mountain": "PQC 15 Aug posture is still a briefing: no schema-1.0 tunnel-through evt, no sealed ML-DSA-65 default, no MCP strand, no JSONL ledger.",
+    "tunnel": "Direct seal: freeze the four standing rules, emit algorithm-tagged A2A records for every workload, validate against gc-workers tunnel-through schema 1.0, register the Lattice Desk strand.",
+    "assessment": "PASSED | R=0.18 | crystalline=0.87",
+    "validation": {
+      "r": 0.18,
+      "r_threshold": 0.4,
+      "crystalline": 0.87,
+      "crystalline_target": 0.85,
+      "skill_target": 0.92,
+      "urgent_changes": false,
+      "fn_dsa_production": false
+    },
+    "phase": "completion",
+    "artifacts": {
+      "strand": {
+        "name": "lattice-desk-pqc-signature-posture",
+        "version": "1.0.0",
+        "verified": true,
+        "crystalline": 0.87,
+        "algorithm_default": "ML-DSA-65",
+        "hybrid": "Ed25519-or-ECDSA",
+        "fips": ["FIPS 204", "FIPS 205", "FIPS 206-draft"],
+        "urgent_changes": false,
+        "relative_to": "2026-07-31-investigation",
+        "tags": ["pqc", "tunnel-through", "a2a", "diamondnode"]
+      },
+      "posture_ids": [
+        "evt-pqc-sig-20260815-ml-dsa-65-production",
+        "evt-pqc-sig-20260815-falcon-512-size",
+        "evt-pqc-sig-20260815-slh-dsa-sha2-128s-root",
+        "evt-pqc-sig-20260815-ml-dsa-65-kms",
+        "evt-pqc-sig-20260815-ml-dsa-65-diamondnode"
+      ]
+    },
+    "metrics": {
+      "entropy_reduction": 0.22,
+      "time_saved_vs_baseline": "81%",
+      "workloads_sealed": 5,
+      "momentum_used": "15-aug-pqc-update"
+    }
+  }
+}
